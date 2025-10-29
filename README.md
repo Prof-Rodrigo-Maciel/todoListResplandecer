@@ -104,8 +104,3 @@ Bug conhecido (a ser corrigido):
 3. Faça commits pequenos e descritivos.
 4. Abra um Pull Request explicando o que foi alterado e por quê.
 
-## Licença
-
-Coloque aqui a licença desejada (por exemplo MIT). Se não houver definição, adicione um arquivo `LICENSE` com a licença escolhida.
-
----
