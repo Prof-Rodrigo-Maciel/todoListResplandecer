@@ -109,4 +109,3 @@ Bug conhecido (a ser corrigido):
 Coloque aqui a licença desejada (por exemplo MIT). Se não houver definição, adicione um arquivo `LICENSE` com a licença escolhida.
 
 ---
-
