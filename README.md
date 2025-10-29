@@ -110,9 +110,3 @@ Coloque aqui a licença desejada (por exemplo MIT). Se não houver definição, 
 
 ---
 
-Se quiser, eu posso:
-- aplicar a correção automática do bug em `js/index.js` agora;
-- unificar o comportamento para usar apenas `js/index2.js` e atualizar `index.html` para referenciar essa versão;
-- adicionar um exemplo de testes automatizados simples.
-
-Diga qual dessas ações prefere que eu execute a seguir.
