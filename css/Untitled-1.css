@@ -1,0 +1,287 @@
+
+
+
+
+.edit-btn, .delete-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+.edit-btn {
+    background-image: url('../img/icons/pencil.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    width: 24px;
+    height: 24px;
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+.delete-btn {
+    background-image: url('../img/icons/licheira.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    width: 24px;
+    height: 24px;
+    filter: invert(36%) sepia(51%) saturate(2766%) hue-rotate(341deg) brightness(99%) contrast(98%);
+}
+
+.edit-input {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: inherit;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+#taskList li span {
+    flex-grow: 1;
+}
+
+.inputSectionFiltroNewTask{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+#taskFilter, #VbtnNewTask{
+    flex-grow: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #ffffff96;
+    border-radius: 8px;
+}
+
+#taskInputFiltro{
+    width: 933px;
+    border-radius: 20px;
+    opacity: 1;
+    top: 331px;
+    left: 501px;
+}
+
+#filtroTaskButton{
+    display: flex;
+    width: 8rem;
+    background-color: #fafafa;
+    color: #6e5cc2;
+    font-size: 1.2rem;
+    /* font-weight: 600; */
+    border-radius: 10px;
+    opacity: 1;
+    padding: 0.5rem;
+    border: solid 1px #6e5cc2;
+}
+
+#newTaskButton{
+    display: flex;
+    width: 10rem;
+    background-color: #fafafa;
+    color: #6e5cc2;
+    font-size: 1.2rem;
+    /* font-weight: 600; */
+    border-radius: 10px;
+    opacity: 1;
+    padding: 0.5rem;
+    border: solid 1px #6e5cc2;
+}
+
+/* Responsive adjustments */
+
+/* Desktop grande */
+@media (min-width: 1441px) {
+    .dashBoardConteiner {
+        /* max-width: 1440px; */
+        margin: 0.3rem auto;
+    }
+    
+    .menuEsquerdo {
+        width: 250px;
+    }
+    
+    #taskList li {
+        /* max-width: 800px; */
+        margin: 8px auto;
+    }
+}
+
+/* Desktop normal e Tablet landscape */
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .dashBoardConteiner {
+        margin: 0.3rem;
+    }
+    
+    .menuEsquerdo {
+        width: 220px;
+    }
+}
+
+/* Tablet / small laptop */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .dashBoardConteiner {
+        grid-template-columns: 180px 1fr;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+        margin: 0.25rem;
+    }
+
+    .menuEsquerdo {
+        width: 180px;
+        padding: 0.75rem;
+    }
+
+    .menuTopo {
+        height: 3.5rem;
+        padding: 0.75rem;
+    }
+
+    .edit-btn, .delete-btn {
+        width: 22px;
+        height: 22px;
+        background-size: 14px 14px;
+    }
+    
+    #taskFilter {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) and (min-width: 601px) {
+    .dashBoardConteiner {
+        grid-template-columns: 160px 1fr;
+        gap: 0.25rem;
+        margin: 0.25rem;
+    }
+
+    .menuEsquerdo {
+        width: 160px;
+        padding: 0.6rem;
+    }
+
+    .inputSectionFiltroNewTask {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    #taskFilter {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .dashBoardConteiner {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "menuTopo"
+            "menuEsquerdo"
+            "menuDireito"
+            "rodape";
+        gap: 0.25rem;
+        margin: 0.25rem;
+    }
+
+    .menuTopo {
+        height: auto;
+        border-radius: 8px;
+        padding: 0.6rem;
+    }
+
+    .menuEsquerdo {
+        width: 100%;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.6rem;
+    }
+
+    .menuDireito {
+        padding: 0.6rem;
+    }
+
+    .rodape {
+        padding: 0.6rem;
+    }
+
+    .inputSectionFiltroNewTask {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    #taskFilter {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    #filtroTaskButton {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    #taskList li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 12px;
+    }
+
+    #taskList li span {
+        width: 100%;
+        word-break: break-word;
+    }
+
+    .edit-input {
+        width: 100%;
+        margin-right: 0;
+        padding: 8px;
+    }
+
+    .edit-btn, .delete-btn {
+        width: 24px;
+        height: 24px;
+        background-size: 16px 16px;
+        margin: 0;
+    }
+
+    /* Ações em linha para mobile */
+    .task-actions {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+/* Utility: ensure predictable sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

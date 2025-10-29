@@ -1,0 +1,111 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.dashBoardConteiner {
+    background-color: #d2d2d2;
+    margin: 0.3rem;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "menuEsquerdo menuTopo"
+    "menuEsquerdo menuDireito"
+    "rodape rodape";
+    gap: 0;
+    min-height: 100vh;
+}
+
+.menuTopo, .menuEsquerdo, .menuDireito, .rodape {
+    padding: 1rem;
+}
+
+.menuTopo {
+    grid-area: menuTopo;
+    background-color: #fafafa;
+    height: 4rem;
+    border-radius: 0px 10px 0 0;
+}
+
+.menuEsquerdo {
+    grid-area: menuEsquerdo;
+    background-color: #6e5cc2;
+    color: #fafafa;
+    width: 200px;
+    border-radius: 10px 0 0 0;    
+}
+
+.menuDireito {
+    grid-area: menuDireito;
+    
+}
+
+.rodape {
+    grid-area: rodape;
+}
+
+.sectionFiltroEnewTask{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.taskFilter, .btnNewTask{
+    display: flex;
+    flex-direction: row;
+    background-color: #fafafa8c;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.taskFilter{
+    flex-grow: 1;
+}
+
+.btnNewTask{
+    width: 8rem;
+}
+
+#taskInputFiltro{
+    border: none;
+    width: 50vw;
+    border-radius: 10px;
+    margin: 0rem 5rem 0rem 1rem;
+    padding: 0rem 5rem 0rem 1rem;
+    font-weight: 700;
+    box-shadow: 0 5px 10px #00000012;
+}
+
+#filtroTaskButton{
+    background-color: #fafafa00;
+    color: #6e5cc2;
+    border: solid 1px #6e5cc2;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    box-shadow: 0 5px 10px #00000012;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#newTaskButton{
+    background-color: #fafafa00;
+    color: #6e5cc2;
+    border: solid 1px #6e5cc2;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    box-shadow: 0 5px 10px #00000012;
+    cursor: pointer;
+}
