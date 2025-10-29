@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styke.css">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <nav id="dashBoardConteiner" class="dashBoardConteiner">
+        <div class="menuTopo">Topo</div>
+        <div class="menuEsquerdo">Esquerdo</div>
+        <div class="menuDireito">
+
+            <section class="sectionFiltroEnewTask">
+                <div id="taskFilter" class="taskFilter">
+                    <input type="text" id="taskInputFiltro" placeholder="Search">
+                    <button id="filtroTaskButton">
+                        <img src="/img/icons/filter.svg" alt="Lupa" width="20px" height="20px">
+                        <span>Filtrar</span>
+                    </button>
+                </div>
+                <div id="btnNewTask" class="btnNewTask">
+                    <button id="newTaskButton"> + Nova Tarefa</button>
+                </div>
+            </section>
+
+            <section class="inputSection">
+                <input type="text" id="taskInput" placeholder="Digite sua tarefa aqui...">
+                <button id="addTaskButton">Adicionar Tarefa</button>
+            </section>
+            <section class="tasksSection">
+                <ul id="taskList"></ul>
+            </section>
+        </div>
+        <div class="rodape">Rodapé</div>
+    </nav>
+    <script src="/js/index.js"></script>    
+</body>
+</html>
