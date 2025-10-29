@@ -104,3 +104,7 @@ Bug conhecido (a ser corrigido):
 3. Faça commits pequenos e descritivos.
 4. Abra um Pull Request explicando o que foi alterado e por quê.
 
+## Equipe Dev
+**Essa é a lista dos desenvolvedores que participaram da criação desse projeto**
+## Rodrigo Maciel
+
