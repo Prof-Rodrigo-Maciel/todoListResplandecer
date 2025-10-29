@@ -77,9 +77,8 @@ html, body {
 
 #taskInputFiltro{
     border: none;
-    width: 50vw;
+    width: 100%;
     border-radius: 10px;
-    margin: 0rem 5rem 0rem 1rem;
     padding: 0rem 5rem 0rem 1rem;
     font-weight: 700;
     box-shadow: 0 5px 10px #00000012;
@@ -109,3 +108,27 @@ html, body {
     box-shadow: 0 5px 10px #00000012;
     cursor: pointer;
 }
+
+[openNovaTarefa="true"] {
+    display: flex;
+    animation: slideDown 0.5s ease-out;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: slideDown;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+[openNovaTarefa="false"] {
+    display: none;
+}
+

@@ -2,6 +2,10 @@
 const inputTarefa = document.querySelector('#taskInput');
 const btnAdicionarTarefa = document.querySelector('#addTaskButton');
 const listaTarefas = document.querySelector('#taskList');
+const inputFiltro = document.querySelector('#taskInputFiltro');
+const btnFiltro = document.querySelector('#filtroTaskButton');
+const btnNewTaskButton = document.getElementById('newTaskButton');
+const inputSection = document.querySelector('.inputSection');
 
 // Carregar tarefas do localStorage quando a página carregar
     function carregarTarefas() {
@@ -117,6 +121,58 @@ const listaTarefas = document.querySelector('#taskList');
         }
     });
 
+
     
+    // Função para filtrar tarefas
+    function filtrarTarefas(termoBusca) {
+        const todasTarefas = listaTarefas.querySelectorAll('li');
+        const termo = termoBusca.toLowerCase().trim();
+        
+        todasTarefas.forEach(tarefa => {
+            const textoTarefa = tarefa.querySelector('span').textContent.toLowerCase();
+            if (textoTarefa.includes(termo)) {
+                tarefa.style.display = ''; // Mostra a tarefa
+            } else {
+                tarefa.style.display = 'none'; // Esconde a tarefa
+            }
+        });
+    }
+
+    // Evento de digitação no campo de filtro
+    inputFiltro.addEventListener('input', (e) => {
+        filtrarTarefas(e.target.value);
+    });
+
+    // Evento de clique no botão de filtro
+    // btnFiltro.addEventListener('click', () => {
+    //     filtrarTarefas(inputFiltro.value);
+    // });
+
+    
+    // Adicionar evento de clique ao botão Nova Tarefa
+    btnNewTaskButton.addEventListener('click', () => {
+        if (inputSection.getAttribute('openNovaTarefa') === 'true') {
+            inputSection.setAttribute('openNovaTarefa', 'false');
+        } else {
+            inputSection.setAttribute('openNovaTarefa', 'true');
+        }
+    });
+
+    // Adicionar estilos de animação
+    const style = document.createElement('style');
+    style.textContent = `
+        #inputSection {
+            display: none;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            z-index: 1000;
+        }
+        @keyframes slideDown {
+            from { transform: translate(-50%, -100%); }
+            to { transform: translate(-50%, -50%); }
+        }
+    `;
+    document.head.appendChild(style);
     // Carregar tarefas existentes
     carregarTarefas();

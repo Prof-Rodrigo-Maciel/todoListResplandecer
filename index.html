@@ -14,22 +14,33 @@
 
             <section class="sectionFiltroEnewTask">
                 <div id="taskFilter" class="taskFilter">
-                    <input type="text" id="taskInputFiltro" placeholder="Search">
-                    <button id="filtroTaskButton">
+                    <input type="text" id="taskInputFiltro" placeholder="Search ">
+                    <!-- <button id="filtroTaskButton">
                         <img src="/img/icons/filter.svg" alt="Lupa" width="20px" height="20px">
                         <span>Filtrar</span>
-                    </button>
+                    </button> -->
                 </div>
                 <div id="btnNewTask" class="btnNewTask">
                     <button id="newTaskButton"> + Nova Tarefa</button>
                 </div>
             </section>
 
-            <section class="inputSection">
+            <section class="inputSection" openNovaTarefa="false">
                 <input type="text" id="taskInput" placeholder="Digite sua tarefa aqui...">
                 <button id="addTaskButton">Adicionar Tarefa</button>
             </section>
             <section class="tasksSection">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Data Inicial</th>
+                            <th>Data Final</th>
+                            <th>Status</th>
+                            <th>Operação</th>
+                        </tr>
+                    </thead>
+                </table>
                 <ul id="taskList"></ul>
             </section>
         </div>
